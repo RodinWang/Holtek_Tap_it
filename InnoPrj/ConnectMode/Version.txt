@@ -1,0 +1,49 @@
+Ver1.00 2020/01/17
+初版：
+1.在HT32F52367 ConnectMode AP_V300基礎上做修改，功能上與該版本一致
+
+Ver1.01 2020/03/19
+1.UR_BUS的TX改為openDrain，解決部份模組電平衝突的問題
+2.在HS不接收數據回傳時（第一字節為0x02），及時清除USR0_using_flag標誌位。HV同樣。
+3.移除用GPIO檢測USB Detect的功能
+  源碼上增加interface分組，初始化I/O和基礎功能
+4.BLE優化初始化流程，解決部份BLE無法成功上電的問題
+5.優化BLE部份函數功能，對基礎收發功能進行調整
+6.BLE支援廣播功能
+7.根據BLE profile_V1.1增加互動模式的功能
+8.刪除原有的SBC語音壓縮，增加MIDI音樂播放功能 
+  BFTM0交由MIDI使用，systick交由MIDI使用
+
+Ver1.02 2020/05/19
+1.主控板提供進入低功耗模式API，和系統命令API，放置在Power.c
+2.提供對MPU6050(V1.3)原始數據解碼API，放置在MPU6050.c
+3.提供和APP互動的驅動API，放置在bleApp.c
+4.ur_bus.h的超時參數設定為4ms & 2ms
+
+Ver1.03 2020/05/19
+1.解決上個版本system cmd會當機的問題
+2.system cmd RDWUS邏輯錯誤問題(Standby清除喚醒記錄)
+3.BUS接收函數改為timeout+check length並行的模式
+4.解決MIDI曲會重疊的問題
+5.Check_APP函數修正字節錯誤問題
+
+Ver2.00 2020/06/08
+1.BUS接收函數改為timeout+check length並行的模式(修復死機問題)
+2.BLE應答統一規格：0-success 1-fail(profile同步修改)
+3.L_Audio_Finish和L_Midi_Finish合併為一條指令
+4.L_Audio_Stop在無音樂播放時返回fail，否則執行L_Audio_Stop命令并返回success
+
+Ver2.01 2020/06/15
+1.互動模式去除BLE設置地址的支持
+2.main函數增加相應的註釋
+3.BUS_WAITING_TIMEOUT設定為5ms
+4.MIDI底層框架修改為與Audio Workshop(Release2020.04.20V0.95)一致
+主要解決L_Audio_Finish失效的問題，並且音質提高
+5.互動模式L_MIDI_Finish去除，和L_Audio_Finish合併
+6.bleApp.c對用戶自定義數據進行支持
+
+Ver2.02 2020/06/29
+1.修復播放MIDI曲時，概率性死機的bug
+2.修復APP某些虛擬輸入時，有概率進入HardFault的bug
+3.BLE應用層BLE_TX_SIZE的大小設置為128，以配合大數據量的模組
+4.歌曲索引值超出實際值時，返回fail

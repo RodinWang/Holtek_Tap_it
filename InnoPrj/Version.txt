@@ -1,0 +1,48 @@
+Ver1.00 2020/02/18
+初版
+1.在HT32F52367 InnoPrj_V201基礎上做修改，功能上與該版本一致
+
+Ver1.01 2020/03/23
+1.UR_BUS的TX改為openDrain，解決部份模組電平衝突的問題
+2.timer的中斷頻率改為1ms，默認僅開放一組中斷給用戶-->解決部份模組概率性無法接收數據的問題
+3.移除用GPIO檢測USB Detect的功能
+  源碼上增加interface分組，初始化I/O和基礎功能
+4.BLE優化初始化流程，解決部份BLE無法成功上電的問題
+5.優化BLE部份函數功能，對基礎收發功能進行調整
+6.提供BLE廣播功能相關API接口
+7.刪除原有的SBC語音壓縮，增加MIDI音樂播放功能 
+  BFTM0交由MIDI使用，systick交由MIDI使用
+
+Ver1.02 2020/05/19
+1.主控板提供進入低功耗模式API，和系統命令API，放置在Power.c
+2.提供對MPU6050(V1.3)原始數據解碼API，放置在MPU6050.c
+3.提供和APP互動的驅動API，放置在bleApp.c
+4.bleApp.h增加USE_BLEAPP_ENABLE宏定義，用於分辨是否使用APP
+
+Ver1.03 2020/05/29
+1.BUS接收函數改為timeout+check length並行的模式
+2.Check_APP函數修正字節錯誤問題
+3.解決MIDI曲會重疊的問題
+4.USE_BLEAPP_ENABLE宏定義優化
+
+Ver2.00 2020/06/08
+1.BUS接收函數改為timeout+check length並行的模式(修復死機問題)
+2.修復APP第一次連接時不上傳主板+模組資訊的問題
+3.BLEParseData和BLE_CheckInput合併，僅僅提供虛擬輸入模塊調用
+4.修復main函數編譯警告問題
+5.對APP發送主板資訊修正為0x01(HT32F0006)
+
+Ver2.01 2020/06/15
+1.BLE設置地址的API去掉
+2.main函數增加相應的註釋
+3.BUS_WAITING_TIMEOUT設定為5ms
+4.MIDI底層框架修改為與Audio Workshop(Release2020.04.20V0.95)一致
+主要解決L_Audio_Finish失效的問題，並且音質提高
+5.L_Audio_Finish和L_MIDI_Finish合併為一條指令
+6.bleApp.c對用戶自定義數據進行支持
+7.利用sys_time提供系統延時函數
+
+Ver2.02 2020/06/29
+1.修復播放MIDI曲時，概率性死機的bug
+2.修復APP某些虛擬輸入時，有概率進入HardFault的bug
+3.BLE應用層BLE_TX_SIZE的大小設置為128，以配合大數據量的模組
