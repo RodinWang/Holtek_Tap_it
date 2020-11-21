@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\HT32\AP\AP.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\HT32\AP\AP.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Oct 27 22:27:06 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sat Nov 21 10:32:14 2020
 <BR><P>
 <H3>Maximum Stack Usage =        464 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -163,15 +163,15 @@ Global Symbols
 <P><STRONG><a name="[3d]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
-<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Init
-<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_WriteByte
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_WriteByte
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_ReadByteExt
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_ReadByte
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
 <LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SCTM1_IRQHandler
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
+<LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Init
+<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10us
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_interface_configure
@@ -201,9 +201,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[5d]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Set_Name
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ParseCmd
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ParseCmd
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_IAP_Info
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Set_Name
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_send_write_phy_pkg
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_send_ctrl_cmd_pkg
 </UL>
@@ -243,8 +243,8 @@ Global Symbols
 
 <P><STRONG><a name="[5b]"></a>__aeabi_uread4</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, uread4.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_SPI_process
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_rcv_packet_parser
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_SPI_process
 </UL>
 
 <P><STRONG><a name="[197]"></a>__rt_uread4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, uread4.o(.text), UNUSED)
@@ -338,12 +338,12 @@ Global Symbols
 <P><STRONG><a name="[51]"></a>AFIO_GPxConfig</STRONG> (Thumb, 82 bytes, Stack size 20 bytes, ht32f5xxxx_gpio.o(i.AFIO_GPxConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = AFIO_GPxConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
+<BR>[Called By]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_GPIOConfiguration
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HV_Transmit
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HS_Transmit
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PortInit
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_GPIOConfiguration
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_interface_configure
 </UL>
 
@@ -378,8 +378,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Set_Name
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLESetupInterval
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLESetWhiteList
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Test
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_multibyte_write
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Test
 </UL>
 
 <P><STRONG><a name="[83]"></a>BC76xx_get_extint</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, bc76xx.o(i.BC76xx_get_extint))
@@ -393,10 +393,10 @@ Global Symbols
 <P><STRONG><a name="[4b]"></a>BC76xx_interface_configure</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, bc76xx.o(i.BC76xx_interface_configure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = BC76xx_interface_configure &rArr; CKCU_GetPeripFrequency &rArr; CKCU_GetClocksFrequency &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InputConfig
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DirectionConfig
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_GetPeripFrequency
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
@@ -534,13 +534,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[6d]"></a>BFTM_EnaCmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ht32f5xxxx_bftm.o(i.BFTM_EnaCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
 </UL>
 
 <P><STRONG><a name="[6c]"></a>BFTM_IntConfig</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, ht32f5xxxx_bftm.o(i.BFTM_IntConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
 </UL>
 
 <P><STRONG><a name="[139]"></a>BFTM_OneShotModeCmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, ht32f5xxxx_bftm.o(i.BFTM_OneShotModeCmd))
@@ -548,8 +548,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[6a]"></a>BFTM_SetCompare</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ht32f5xxxx_bftm.o(i.BFTM_SetCompare))
-<BR><BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BFTM_Config
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
 </UL>
 
 <P><STRONG><a name="[6b]"></a>BFTM_SetCounter</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ht32f5xxxx_bftm.o(i.BFTM_SetCounter))
@@ -605,8 +605,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_Discard
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_enter_power_up
 </UL>
-<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
+<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[77]"></a>BLE_Read_Buffer</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bleuser.o(i.BLE_Read_Buffer))
@@ -682,11 +682,8 @@ Global Symbols
 <P><STRONG><a name="[81]"></a>BLE_process</STRONG> (Thumb, 1098 bytes, Stack size 24 bytes, bleprocess.o(i.BLE_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = BLE_process &rArr; Buffer_WriteExt &rArr; Buffer_Write &rArr; Buffer_WriteByte &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_WriteExt
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_timer_process
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_event_parser
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_SPI_process
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_WriteExt
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_wakeup
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_send_write_phy_pkg
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_send_read_phy_pkg
@@ -696,6 +693,9 @@ Global Symbols
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_rcv_packet_parser
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_power_mode
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_get_extint
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_timer_process
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_event_parser
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_SPI_process
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uwrite4
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uread4
 </UL>
@@ -721,9 +721,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[76]"></a>Buffer_Discard</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, buffer.o(i.Buffer_Discard))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Power_Up
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UR_Bus_Receive
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Power_Up
 </UL>
 
 <P><STRONG><a name="[50]"></a>Buffer_Init</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, buffer.o(i.Buffer_Init))
@@ -737,9 +737,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Read_Buffer
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
+<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Parse_Retval
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Read_Buffer
 </UL>
 
 <P><STRONG><a name="[8b]"></a>Buffer_ReadByte</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, buffer.o(i.Buffer_ReadByte))
@@ -821,11 +821,11 @@ Global Symbols
 <P><STRONG><a name="[4a]"></a>CKCU_PeripClockConfig</STRONG> (Thumb, 34 bytes, Stack size 20 bytes, ht32f5xxxx_ckcu.o(i.CKCU_PeripClockConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = CKCU_PeripClockConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_Configuration
+<LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Init
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PortInit
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76XX_Init
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_Configuration
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C0_Init
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InterfaceADC_Init
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SERIAL_USBDInit
@@ -857,6 +857,7 @@ Global Symbols
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;QueueProcess
 </UL>
 
 <P><STRONG><a name="[97]"></a>ClearSingleLED</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, main.o(i.ClearSingleLED))
@@ -884,9 +885,7 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>EVWUP_IRQHandler</STRONG> (Thumb, 158 bytes, Stack size 8 bytes, power.o(i.EVWUP_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = EVWUP_IRQHandler &rArr; Wakeup_OtherBUS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Power_Up
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTICK_CounterCmd
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYSTICK_CounterCmd
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetWakeupFlagStatus
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearWakeupFlag
@@ -894,6 +893,8 @@ Global Symbols
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wakeup_OtherBUS
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wakeup_Delay
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_Power_Up
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
@@ -1025,10 +1026,10 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[52]"></a>GPIO_DirectionConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ht32f5xxxx_gpio.o(i.GPIO_DirectionConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PortInit
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wakeup_OtherBUS
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PortInit
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ModeGPIOSetup
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Foot_GPIO_Setup
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wakeup_OtherBUS
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_interface_configure
 </UL>
 
@@ -1045,9 +1046,9 @@ Global Symbols
 <P><STRONG><a name="[b3]"></a>GPIO_PortInit</STRONG> (Thumb, 236 bytes, Stack size 24 bytes, gpio.o(i.GPIO_PortInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = GPIO_PortInit &rArr; I2C0_Init &rArr; I2C_Init &rArr; CKCU_GetPeripFrequency &rArr; CKCU_GetClocksFrequency &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DirectionConfig
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DirectionConfig
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C0_Init
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InterfaceADC_Init
 </UL>
@@ -1055,9 +1056,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[54]"></a>GPIO_PullResistorConfig</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, ht32f5xxxx_gpio.o(i.GPIO_PullResistorConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ModeGPIOSetup
+<BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ModeGPIOSetup
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Foot_GPIO_Setup
-<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BC76xx_interface_configure
 </UL>
 
@@ -1137,20 +1138,20 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8d]"></a>Get_Valid_Lenth</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, buffer.o(i.Get_Valid_Lenth))
-<BR><BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_BLE_RX_Length
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
+<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Buffer_ReadByteExt
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UR_Bus_Receive
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Parse_Retval
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_BLE_RX_Length
 </UL>
 
 <P><STRONG><a name="[8a]"></a>HS_Receive</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, urbus.o(i.HS_Receive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = HS_Receive &rArr; MIDI_Procrss &rArr; __L_Midi_Decode &rArr; __Midi_Event_Decode &rArr; __L_Midi_Event_Dispose &rArr; MIDI_NotePlayDispose &rArr; Midi_AddrInc &rArr; __L_Get_Flash_32byte &rArr; MIDI_SPIDATA_Read &rArr; MIDI_CHx_NOTE &rArr; MIDI_VOL
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_Procrss
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UR_Bus_Receive
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_Procrss
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Multi_Rotate
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearSingleLED
@@ -1266,10 +1267,10 @@ Global Symbols
 <P><STRONG><a name="[bd]"></a>LS_Receive</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, urbus.o(i.LS_Receive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = LS_Receive &rArr; MIDI_Procrss &rArr; __L_Midi_Decode &rArr; __Midi_Event_Decode &rArr; __L_Midi_Event_Dispose &rArr; MIDI_NotePlayDispose &rArr; Midi_AddrInc &rArr; __L_Get_Flash_32byte &rArr; MIDI_SPIDATA_Read &rArr; MIDI_CHx_NOTE &rArr; MIDI_VOL
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_Procrss
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UR_Bus_Receive
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_Procrss
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vibrate_Sensitivity_Set
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vibrate_Detect
@@ -1322,9 +1323,9 @@ Global Symbols
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FuncKey_DemoAll
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Audio_Stop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Sntnc_Start
+<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetGameMode
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Sntnc_Start
 </UL>
 
 <P><STRONG><a name="[d4]"></a>L_Audio_Stop</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, key_func.o(i.L_Audio_Stop))
@@ -1584,10 +1585,10 @@ Global Symbols
 <P><STRONG><a name="[104]"></a>MIDI_SPIDATA_Read</STRONG> (Thumb, 108 bytes, Stack size 56 bytes, midi_decode.o(i.MIDI_SPIDATA_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MIDI_SPIDATA_Read &rArr; MIDI_CHx_NOTE &rArr; MIDI_VOL
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_CHx_NOTE
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__L_Channel_Delay
+<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__L_Channel_Delay
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_CTRL_SPIRDENCmd
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_CTRL_SPIDISLOOPCmd
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_CHx_NOTE
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__L_Get_Flash_Single_2byte
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__L_Get_Flash_32byte
@@ -1798,12 +1799,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;QueueProcess
 </UL>
 
-<P><STRONG><a name="[11e]"></a>QueueProcess</STRONG> (Thumb, 312 bytes, Stack size 32 bytes, main.o(i.QueueProcess))
+<P><STRONG><a name="[11e]"></a>QueueProcess</STRONG> (Thumb, 304 bytes, Stack size 32 bytes, main.o(i.QueueProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 400<LI>Call Chain = QueueProcess &rArr; BeatLEDControl &rArr; HS_Receive &rArr; MIDI_Procrss &rArr; __L_Midi_Decode &rArr; __Midi_Event_Decode &rArr; __L_Midi_Event_Dispose &rArr; MIDI_NotePlayDispose &rArr; Midi_AddrInc &rArr; __L_Get_Flash_32byte &rArr; MIDI_SPIDATA_Read &rArr; MIDI_CHx_NOTE &rArr; MIDI_VOL
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;QueuePop
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Multi_Rotate
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearSingleLED
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearAllLED
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BeatLEDControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -2114,9 +2116,7 @@ Global Symbols
 <P><STRONG><a name="[13f]"></a>USBDCore_IRQHandler</STRONG> (Thumb, 376 bytes, Stack size 24 bytes, ht32_usbd_core.o(i.USBDCore_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = USBDCore_IRQHandler &rArr; _USBDCore_Setup &rArr; _USBDCore_ControlIN &rArr; USBD_EPTWriteINData &rArr; _USBD_CopyMemory
 </UL>
-<BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
-<LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReadSETUPData
+<BR>[Calls]<UL><LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ReadSETUPData
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_PowerOn
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_PowerOff
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_GetINT
@@ -2129,6 +2129,8 @@ Global Symbols
 <LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTClearINT
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_DeInit
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_ClearINT
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_IRQHandler
 </UL>
@@ -2222,8 +2224,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBD_GetEPTnAddr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTWriteINData
+<BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTWriteINData
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTGetBuffer1Addr
 </UL>
 
@@ -2261,8 +2263,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTReset
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBD_GetEPTnAddr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_Request
-<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBDCore_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBDCore_IRQHandler
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_Request
 </UL>
 
 <P><STRONG><a name="[157]"></a>USBD_EPTReadMemory</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, ht32f5xxxx_usbd.o(i.USBD_EPTReadMemory))
@@ -2319,11 +2321,11 @@ Global Symbols
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBD_GetEPTnAddr
 <LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBD_CopyMemory
 </UL>
-<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SERIAL_PutChar
+<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SERIAL_PutChar
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SERIAL_Flush
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBDCore_IRQHandler
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
 </UL>
 
 <P><STRONG><a name="[146]"></a>USBD_EnableINT</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ht32f5xxxx_usbd.o(i.USBD_EnableINT))
@@ -2452,16 +2454,16 @@ Global Symbols
 <P><STRONG><a name="[84]"></a>__ARM_common_switch8</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, main.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Midi_In_Dispose
+<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Midi_In_Dispose
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_process
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_GetClocksFrequency
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__L_Midi_Event_Dispose
 </UL>
 
 <P><STRONG><a name="[107]"></a>__L_Channel_Delay</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, channel_dispose.o(i.__L_Channel_Delay))
 <BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__l_channel_dispose
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_SPIDATA_Read
 <LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__L_Channel_First_Dispose
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_SPIDATA_Read
 </UL>
 
 <P><STRONG><a name="[166]"></a>__L_Channel_First_Dispose</STRONG> (Thumb, 176 bytes, Stack size 28 bytes, channel_dispose.o(i.__L_Channel_First_Dispose))
@@ -2561,8 +2563,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__l_get_channel
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Audio_Play
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_NotePlayDispose
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;L_Midi_In_Note_On
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIDI_NotePlayDispose
 </UL>
 
 <P><STRONG><a name="[e2]"></a>__L_Off_Note_Play</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, channel_dispose.o(i.__L_Off_Note_Play))
@@ -2773,7 +2775,9 @@ Global Symbols
 <P><STRONG><a name="[22]"></a>main</STRONG> (Thumb, 1000 bytes, Stack size 32 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 464<LI>Call Chain = main &rArr; TapModeProcess &rArr; QueueProcess &rArr; BeatLEDControl &rArr; HS_Receive &rArr; MIDI_Procrss &rArr; __L_Midi_Decode &rArr; __Midi_Event_Decode &rArr; __L_Midi_Event_Dispose &rArr; MIDI_NotePlayDispose &rArr; Midi_AddrInc &rArr; __L_Get_Flash_32byte &rArr; MIDI_SPIDATA_Read &rArr; MIDI_CHx_NOTE &rArr; MIDI_VOL
 </UL>
-<BR>[Calls]<UL><LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDT_Restart
+<BR>[Calls]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Init
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDT_Restart
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;URBus_Init
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_Init
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RETARGET_Configuration
@@ -2807,8 +2811,6 @@ Global Symbols
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BeatLEDControl
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_IsConnected
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BLE_CustomInit
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Init
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IAP_Handler
 <LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;srand
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
@@ -2859,17 +2861,17 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTWriteINData
 <LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTGetBufferLen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
-<LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBDCore_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBDCore_IRQHandler
+<LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
 </UL>
 
 <P><STRONG><a name="[149]"></a>_USBDCore_Setup</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, ht32_usbd_core.o(i._USBDCore_Setup))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = _USBDCore_Setup &rArr; _USBDCore_ControlIN &rArr; USBD_EPTWriteINData &rArr; _USBD_CopyMemory
 </UL>
-<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_Request
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
-<LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTWriteINData
+<BR>[Calls]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTWriteINData
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTSendSTALL
+<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_Request
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_ControlIN
 </UL>
 <BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBDCore_IRQHandler
 </UL>
@@ -2883,12 +2885,12 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[160]"></a>_USBDCore_Standard_Request</STRONG> (Thumb, 266 bytes, Stack size 16 bytes, ht32_usbd_core.o(i._USBDCore_Standard_Request))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _USBDCore_Standard_Request &rArr; _USBDCore_Standard_SetClearFeature &rArr; USBD_EPTSetHalt
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _USBDCore_Standard_Request &rArr; USBD_EPTInit &rArr; USBD_EPTReset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_SetClearFeature
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_GetStatus
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_SetAddress
+<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_SetAddress
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_EPTInit
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_SetClearFeature
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Standard_GetStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_USBDCore_Setup
 </UL>
@@ -2948,10 +2950,10 @@ Local Symbols
 <P><STRONG><a name="[9d]"></a>Wakeup_OtherBUS</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, power.o(i.Wakeup_OtherBUS))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Wakeup_OtherBUS
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DirectionConfig
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetOutBits
+<BR>[Calls]<UL><LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetOutBits
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ClearOutBits
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wakeup_Delay
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DirectionConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 </UL>

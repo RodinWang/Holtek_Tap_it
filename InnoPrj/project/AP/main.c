@@ -439,9 +439,10 @@ void QueueProcess(u8 VibrateCode, u8 GPIOCode)
 								(BeatCounter <= (Queue[i].BeatTime + 2*LED_TIMEOUT_TIMING + 10)))
 				{
 					QueuePop(i);
-					ClearSingleLED(i);
+					ClearAllLED();
 					GameMode = 4;
 					AudioCnt = 0;
+					return;
 				}
 				// Timeout detect
 				else if ((BeatCounter >= (Queue[i].BeatTime + LED_TIMEOUT_TIMING)) && 
@@ -486,9 +487,10 @@ void QueueProcess(u8 VibrateCode, u8 GPIOCode)
 								(BeatCounter <= (Queue[i].BeatTime + 2*LED_TIMEOUT_TIMING + 10)))
 				{
 					QueuePop(i);
-					ClearSingleLED(i);
+					ClearAllLED();
 					GameMode = 4;
 					AudioCnt = 0;
+					return;
 				}
 				// Timeout detect
 				else if ((BeatCounter >= (Queue[i].BeatTime + LED_TIMEOUT_TIMING)) && 
