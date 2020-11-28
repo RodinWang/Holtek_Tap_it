@@ -3,7 +3,7 @@
 
 
 // Song Map end timing
-#define SONG_BEAT_END_LITTLE_STAR 3100
+#define SONG_BEAT_END_LITTLE_STAR 3025
 #define SONG_BEAT_END_CANON 14349
 #define SONG_BEAT_END_DEMONS 17657
 const u32 SongBeatEnd[] = { SONG_BEAT_END_LITTLE_STAR,
@@ -12,12 +12,14 @@ const u32 SongBeatEnd[] = { SONG_BEAT_END_LITTLE_STAR,
 														};
 
 // Song beat map timing
-const u32 SongBeatMapTimingLittleStar[] = { 0, 70, 120, 180, 250, 310, 360,
-																						500, 560, 630, 690, 770, 825, 880,
-																						1010, 1070, 1130, 1200, 1260, 1320, 1380,
-																						1510, 1570, 1630, 1700, 1780, 1830, 1900,
-																						2020, 2080, 2150, 2220, 2270, 2330, 2400,
-																						2530, 2600, 2650, 2720, 2780, 2830, 2900,
+const u32 SongBeatMapTimingLittleStar[] = { 0, 63, 126, 189, 252, 315, 378,
+																						441, 504, 567, 630, 693, 756, 819,
+																						882, 945, 1008, 1071, 1134, 1197,
+																						1260, 1323, 1386, 1449, 1512, 1575,
+																						1638, 1701, 1764, 1827, 1890, 1953,
+																						2016, 2079, 2142, 2205, 2268, 2331,
+																						2394, 2457, 2520, 2583, 2646, 2709,
+																						2772, 2835, 2898, 2961, 3024, 
 																						SONG_BEAT_END_LITTLE_STAR};//10 ms
 
 const u32 SongBeatMapTimingCanon[] = { 0, 79, 158, 237, 316, 395, 474,

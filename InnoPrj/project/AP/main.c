@@ -655,13 +655,7 @@ int main(void)
 	{
 		Vibrate_Sensitivity_Set(EID_VIBR[i],  1);
 	}
-	
-	//RGB LED init show
-	for (i = 0; i < 6; i++)
-	{
-		LED_Multi_Rotate(EID_LED[i], LED_DEFAULT_HOLD_TIME, LED_ROTATE_MULTI);
-	}
-	
+	ClearAllLED();
 	while (1)
 	{
 		////////////////////////////////////////////////////
@@ -681,18 +675,6 @@ int main(void)
 		{
 			// detect Mode
 			GameMode = GetGameMode(GetModeSW());
-			if (GameMode == 1)
-			{
-				ClearAllLED();
-			}
-			else if (GameMode != 0)
-			{
-				for (i = 0; i < 6; i++)
-				{
-					LED_Multi_Rotate(EID_LED[i], LED_DEFAULT_HOLD_TIME, LED_ROTATE_MULTI);
-					LED_Multi_Rotate(EID_LED[i], LED_DEFAULT_HOLD_TIME, LED_ROTATE_MULTI);
-				}
-			}
 			AudioCnt = 0;
 			
 		}
@@ -713,7 +695,7 @@ int main(void)
 			//LedTest(VibrateCode, GPIOCode);	
 			
 			GameMode = GetGameMode(GetModeSW());
-			if (GameMode != 1)
+			if (GameMode == 2)
 			{
 				for (i = 0; i < 6; i++)
 				{
@@ -723,6 +705,11 @@ int main(void)
 				{
 					LED_Multi_Rotate(EID_LED[i], LED_DEFAULT_HOLD_TIME, LED_ROTATE_MULTI);
 				}
+			}
+			else
+			{
+				ClearAllLED();
+				ClearAllLED();
 			}
 			
 		}
@@ -926,11 +913,7 @@ int main(void)
 			AudioCnt = 0;
 			// detect Mode
 			GameMode = GetGameMode(GetModeSW());
-			//RGB LED init show
-			for (i = 0; i < 6; i++)
-			{
-				LED_Multi_Rotate(EID_LED[i], LED_DEFAULT_HOLD_TIME, LED_ROTATE_MULTI);
-			}
+			ClearAllLED();
 		}
 		if (DelayCnt >= 5)
 		{
